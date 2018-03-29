@@ -8,7 +8,7 @@ public class InverseCaptcha {
 		int length = digits.length;
 		int firstChar = Character.getNumericValue (digits[0]);
 		int nextChar;
-		for (int i = 1; i <= length;i++) {
+		for (int i = 1; i <= length; i++) {
 			nextChar = Character.getNumericValue (digits[i % length]);
 			if (nextChar == firstChar) {
 				result += firstChar;
@@ -26,7 +26,7 @@ public class InverseCaptcha {
 		int step = length / 2;
 		int firstChar = Character.getNumericValue (digits[0]);
 		int nextChar, checkChar;
-		for (int i = 1; i <= length;i++) {
+		for (int i = 1; i <= length; i++) {
 			nextChar = Character.getNumericValue (digits[i % length]);
 			checkChar = Character.getNumericValue (digits[(i - 1 + step) % length]);
 			if (checkChar == firstChar) {
@@ -37,5 +37,4 @@ public class InverseCaptcha {
 
 		return result;
 	}
-
 }
