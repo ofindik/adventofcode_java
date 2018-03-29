@@ -7,37 +7,17 @@ import org.junit.jupiter.api.Test;
 class InverseCaptchaTest2 {
 
 	@Test
-	void matched_digits_should_return_sum_of_them_1 () {
+	void matched_digits_should_return_sum_of_them () {
 		InverseCaptcha inverseCaptcha = new InverseCaptcha ();
 		int expected = 6;
 		assertEquals (expected , inverseCaptcha.process2 ("1212"));
-	}
-
-	@Test
-	void matched_digits_should_return_sum_of_them_2 () {
-		InverseCaptcha inverseCaptcha = new InverseCaptcha ();
-		int expected = 0;
+		expected = 0;
 		assertEquals (expected , inverseCaptcha.process2 ("1221"));
-	}
-
-	@Test
-	void matched_digits_should_return_sum_of_them_3 () {
-		InverseCaptcha inverseCaptcha = new InverseCaptcha ();
-		int expected = 4;
+		expected = 4;
 		assertEquals (expected , inverseCaptcha.process2 ("123425"));
-	}
-
-	@Test
-	void matched_digits_should_return_sum_of_them_4 () {
-		InverseCaptcha inverseCaptcha = new InverseCaptcha ();
-		int expected = 12;
+		expected = 12;
 		assertEquals (expected , inverseCaptcha.process2 ("123123"));
-	}
-
-	@Test
-	void matched_digits_should_return_sum_of_them_5 () {
-		InverseCaptcha inverseCaptcha = new InverseCaptcha ();
-		int expected = 4;
+		expected = 4;
 		assertEquals (expected , inverseCaptcha.process2 ("12131415"));
 	}
 
