@@ -7,7 +7,7 @@ public class CorruptionChecksum {
 	public int process (List<String> lines) {
 		int checksum = 0;
 		for (String line : lines) {
-			String[] numberArray = line.split (" ");
+			String[] numberArray = line.split ("\t");
 			checksum += findMax (numberArray) - findMin (numberArray);
 			
 		}

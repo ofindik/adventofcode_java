@@ -30,6 +30,16 @@ public class CorruptionChecksumTest {
 			corruptionChecksum.process (readFile ("/Users/osmanf/adventofcode_java/src/day2/spreadsheet2.txt")));
 	}
 
+	@Test
+	void puzzle_test () {
+		CorruptionChecksum corruptionChecksum = new CorruptionChecksum ();
+		int expected = 47136;
+		assertEquals (
+			expected,
+			corruptionChecksum.process (readFile ("/Users/osmanf/adventofcode_java/src/day2/spreadsheet_puzzle.txt")));
+		
+	}
+	
 	private List<String> readFile (String fileName) {
 		List<String> lines = Collections.emptyList ();
 		try {
