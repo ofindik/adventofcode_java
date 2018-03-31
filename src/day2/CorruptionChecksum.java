@@ -5,9 +5,13 @@ import java.util.List;
 public class CorruptionChecksum {
 
 	public int process (List<String> lines) {
-		String firstLine = lines.get (0);
-		String[] numberArray = firstLine.split (" ");
-		return findMax (numberArray) - findMin (numberArray);
+		int checksum = 0;
+		for (String line : lines) {
+			String[] numberArray = line.split (" ");
+			checksum += findMax (numberArray) - findMin (numberArray);
+			
+		}
+		return checksum;
 	}
 
 	private int findMax (String[] numberArray) {
@@ -18,7 +22,6 @@ public class CorruptionChecksum {
 				max = value;
 			}
 		}
-		System.out.println ("max:" + max);
 		return max;
 	}
 
@@ -30,7 +33,6 @@ public class CorruptionChecksum {
 				min = value;
 			}
 		}
-		System.out.println ("min:" + min);
 		return min;
 	}
 
